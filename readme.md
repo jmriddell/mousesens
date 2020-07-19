@@ -17,7 +17,7 @@ Simple command line utility to change the sensibility of a pointer device under 
 
 ### Caveats
 
-* Settings are not persistent, for persistent settings it can be included in a startup script.
+* Settings are not persistent, for persistent settings it can be called in a startup script.
 
 ### Usage
 
