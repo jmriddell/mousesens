@@ -1,13 +1,13 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 
 setup(
     name='mousesens',
     version='0.2',
-    py_modules=['mousesens'],
+    packages=find_packages(),
     intall_requires=['Click',],
     entry_points='''
         [console_scripts]
-        mousesens=mousesens:cli
+        mousesens=mousesens.mousesens:cli
     ''',
 )
