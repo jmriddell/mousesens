@@ -3,7 +3,7 @@
 import subprocess
 
 
-def get_name(line):
+def _get_name(line):
     """Get name of a pointer device given it's line from 'xinput --list'."""
     return line[6:].split("\t", maxsplit=1)[0].rstrip()
 
@@ -18,7 +18,7 @@ def get_pointer_devices():
 
     return list(
         map(
-            get_name,
+            _get_name,
             filter(
                 lambda x: x.startswith('⎜'),
                 string.splitlines()
@@ -27,7 +27,7 @@ def get_pointer_devices():
     )
 
 
-def mousesens_command(device:str, sensibility:float):
+def _mousesens_command(device:str, sensibility:float):
     """Make the command to be executed to change the pointer sensibility."""
     sens_string = format(sensibility, 'f')
     return [
@@ -48,4 +48,4 @@ def mousesens_command(device:str, sensibility:float):
 
 def set_sensibility(device:str, sensibility:float):
     """Set the sensibility of a pointer device."""
-    subprocess.run(mousesens_command(device, sensibility),)
+    subprocess.run(_mousesens_command(device, sensibility),)
