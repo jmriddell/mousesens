@@ -54,14 +54,9 @@ def cli():
     pass
 
 
-def _completion_devices(ctx, args, incomplete):
-    """List devices for autocompletion."""
-    return list(map(lambda x: x.replace(" ", r"\ "), get_pointer_devices()))
-
-
 @click.command(name="set")
 @click.argument(
-    "device", type=click.STRING, autocompletion=_completion_devices
+    "device", type=click.Choice(get_pointer_devices())
 )
 @click.argument("sensibility", type=click.FLOAT)
 def set_sensibility(device, sensibility):
