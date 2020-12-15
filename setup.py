@@ -26,5 +26,5 @@ setup(
     ],
     packages=find_packages(),
     intall_requires=["Click"],
-    entry_points=dict(console_scripts=["mousesens=mousesens.mousesens:cli"]),
+    entry_points=dict(console_scripts=["mousesens=mousesens.cli:cli"]),
 )

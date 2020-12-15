@@ -1,7 +1,6 @@
-"""Change the mouse sensibility."""
+"""CLI functions."""
 
 import click
-import subprocess
 import mousesens.xinput_interface as xi
 
 
