@@ -17,11 +17,13 @@ def get_pointer_devices():
     ).stdout
 
     return list(
-        map(
-            _get_name,
-            filter(
-                lambda x: x.startswith('⎜'),
-                string.splitlines()
+        filter(lambda x: x != "Virtual core XTEST pointer",
+            map(
+                _get_name,
+                filter(
+                    lambda x: x.startswith('⎜'),
+                    string.splitlines()
+                )
             )
         )
     )
