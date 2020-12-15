@@ -6,16 +6,14 @@ with open("readme.md", "r", encoding="utf-8") as fh:
 
 
 setup(
-    name='mousesens',
-    version='0.2',
-
+    name="mousesens",
+    version="0.2",
     description="Change the mouse sensitivity",
     author="Juan Molina Riddell",
     author_email="jmriddell@protonmail.ch",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/jmriddell/mousesens",
-
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
@@ -26,11 +24,7 @@ setup(
         "Topic :: Desktop Environment",
         "Topic :: Utilities",
     ],
-
     packages=find_packages(),
-    intall_requires=['Click',],
-    entry_points='''
-        [console_scripts]
-        mousesens=mousesens.mousesens:cli
-    ''',
+    intall_requires=["Click"],
+    entry_points=dict(console_scripts=["mousesens=mousesens.mousesens:cli"]),
 )
