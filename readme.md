@@ -21,27 +21,18 @@ Simple command line utility to change the sensibility of a pointer device under 
 
 ## Installation
 
-1. To get a copy you can either:
-    * Clone Github repository
-        ```bash
-        git clone https://github.com/jmriddell/mousesens.git
-        ```
-    * Download manually
+1. Download and install
+    * If you don't have git installed
+       ```bash
+       pip install https://github.com/jmriddell/mousesens/archive/master.zip
+       ```
+    * If you have git installed:
+       ```bash
+       pip install git+https://github.com/jmriddell/mousesens.git
+       ```
+    In both cases can be done appending the option `--user` to avoid requiring root privileges.
 
-2. Install
-    1. Open a terminal and change to repository folder
-    2. Once in the repository folder you can either:
-        * Install using pip
-            ```bash
-            pip install .
-            ```
-        * Install running setup.py
-            ```bash
-            python setup.py install
-            ```
-        In both cases can be done appending the option `--user` to avoid requiring root privileges.
-
-3. Activate shell completion (optional)
+2. Activate shell completion (optional)
 
     The procedure will vary slightly depending on your shell:
 
