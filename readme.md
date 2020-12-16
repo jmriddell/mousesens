@@ -47,15 +47,15 @@ Simple command line utility to change the sensibility of a pointer device under 
 
     * For Bash, add this to `~/.bashrc`:
         ```bash
-        eval "$(_FOO_BAR_COMPLETE=source_bash foo-bar)"
+        eval "$(_MOUSESENS_COMPLETE=source_bash mousesens)"
         ```
     * For Zsh, add this to `~/.zshrc`:
         ```bash
-        eval "$(_FOO_BAR_COMPLETE=source_zsh foo-bar)"
+        eval "$(_MOUSESENS_COMPLETE=source_zsh mousesens)"
         ```
-    * For Fish, add this to `~/.config/fish/completions/foo-bar.fish`:
+    * For Fish, add this to `~/.config/fish/completions/mousesens.fish`:
         ```bash
-        eval (env _FOO_BAR_COMPLETE=source_fish foo-bar)
+        eval (env _MOUSESENS_COMPLETE=source_fish mousesens)
         ```
 
 
