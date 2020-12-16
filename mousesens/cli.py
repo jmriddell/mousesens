@@ -6,7 +6,7 @@ import mousesens.xinput_interface as xi
 
 @click.group()
 def cli():
-    """Command line utility to change the sensibility of a pointer device."""
+    """Command line utility to change the sensitivity of a pointer device."""
     pass
 
 
@@ -14,10 +14,10 @@ def cli():
 @click.argument(
     "device", type=click.Choice(xi.get_pointer_devices())
 )
-@click.argument("sensibility", type=click.FLOAT)
-def set_sensibility(device, sensibility):
-    """Set the sensibility of a pointer device."""
-    xi.set_sensibility(device, float(sensibility))
+@click.argument("sensitivity", type=click.FLOAT)
+def set_sensitivity(device, sensitivity):
+    """Set the sensitivity of a pointer device."""
+    xi.set_sensitivity(device, float(sensitivity))
 
 
 @click.command(name="list")
@@ -30,4 +30,4 @@ def list_devices():
 
 
 cli.add_command(list_devices)
-cli.add_command(set_sensibility)
+cli.add_command(set_sensitivity)

@@ -1,6 +1,6 @@
 # Mousesens
 
-Simple command line utility to change the sensibility of a pointer device under linux using the `xinput` command.
+Simple command line utility to change the sensitivity of a pointer device under linux using the `xinput` command.
 
 ## Reason
 
@@ -65,10 +65,10 @@ mousesens list
 
 ### `set`
 
-Set the sensibility of a pointer device given its name and a sensibility value.
+Set the sensitivity of a pointer device given its name and a sensitivity value.
 
 ```bash
-mousesens set [DEVICE_NAME] [SENSIBILITY]
+mousesens set [DEVICE_NAME] [SENSITIVITY]
 ```
 
 Examples:

@@ -29,9 +29,9 @@ def get_pointer_devices():
     )
 
 
-def _mousesens_command(device:str, sensibility:float):
-    """Make the command to be executed to change the pointer sensibility."""
-    sens_string = format(sensibility, 'f')
+def _mousesens_command(device:str, sensitivity:float):
+    """Make the command to be executed to change the pointer sensitivity."""
+    sens_string = format(sensitivity, 'f')
     return [
         'xinput',
         'set-prop',
@@ -48,6 +48,6 @@ def _mousesens_command(device:str, sensibility:float):
         '1.000000'
     ]
 
-def set_sensibility(device:str, sensibility:float):
-    """Set the sensibility of a pointer device."""
-    subprocess.run(_mousesens_command(device, sensibility),)
+def set_sensitivity(device:str, sensitivity:float):
+    """Set the sensitivity of a pointer device."""
+    subprocess.run(_mousesens_command(device, sensitivity),)
