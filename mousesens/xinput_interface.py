@@ -11,7 +11,7 @@ def _get_name(line):
 def get_pointer_devices():
     """Get a list of pointer device names using 'xinput --list'."""
     string = subprocess.run(
-        ["xinput", "--list"],
+        ["xinput", "list"],
         capture_output=True,
         encoding="utf8"
     ).stdout
@@ -34,7 +34,7 @@ def _mousesens_command(device:str, sensibility:float):
     sens_string = format(sensibility, 'f')
     return [
         'xinput',
-        '--set-prop',
+        'set-prop',
         device,
         'Coordinate Transformation Matrix',
         sens_string + ',',
