@@ -7,7 +7,7 @@ Simple command line utility to change the sensitivity of a pointer device under 
 * Minimal systems like Archlinux installations don't come with any graphical or text-based utility to do this.
 * Many utilities come as a part of a desktop environment, and may not work properly if used not in its respective desktop environment.
 * Many utilities can adjust just the acceleration of the pointer device instead of the pixels per physical distance relation.
-* Doing this task using `xinput` alone requires entering a very long line into the terminal with repeated info, which is far from ideal if trying different settings to find the right one.
+* Doing this task using `xinput` alone requires entering a very long line into the terminal with repeated info, which is far from ideal while trying different settings to find the right one.
 * There are many articles available online on how to change the mouse acceleration, but what we usually want to adjust is just the linear speed of the pointer device.
 
 ## Features
